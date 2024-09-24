@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%load static%}
+
+    {%block content%}
+    <main>
+        <section class="post-form">
+            <textarea placeholder="What's on your mind?"></textarea>
+            <button>Post</button>
+            
+        </section>
+
+        <section class="posts">
+            <article class="post">
+                <h2>Cynthia</h2>
+                <p>this is kim taehyung</p>
+                <img src="{%static 'images\Screenshot_2021-03-17-16-39-51-1936128479.png'%}" alt="BTS" type="image/png" width="100">
+            </article>
+
+            <article class="post">
+                <h2>Faahji</h2>
+                <p>Check out this amazing video!</p>
+                <video controls width="600">
+                    <source src="{%static 'videos\856787-hd_1920_1080_30fps.mp4'%}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+
+            <article class="post">
+                <h2>Omah</h2>
+                <p>This link takes you to Bighit page:</p>
+                <a href="https://ibighit.com/bts/eng/">Read this article</a>
+                <audio controls>
+                    <source src="{% static 'audio\BTS (방탄소년단) - NO MORE DREAM.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+        </section>
+        {%endblock%}
+
+    </main>
+ 
+    

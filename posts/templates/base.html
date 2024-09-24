@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LUMINA{% endblock %}</title>
+    <link rel="stylesheet" href="{%static 'styles\index.css'%}"/>
+</head>
+<body>
+    <header>
+        <h1>LUMINA</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'messages' %}">Messages</a></li>
+                <li><a href="{% url 'notifications' %}">Notifications</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <button id="toggleButton">Toggle Content</button>
+        <div id="toggleContent" class="hidden">
+            <p>This content can be toggled.</p>
+        </div>
+
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Social Media. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'js\script.js' %}"></script>
+</body>
+</html>

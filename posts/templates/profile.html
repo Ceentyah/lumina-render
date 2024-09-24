@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%load static%}
+
+    {%block content%}
+    <main>
+        <section class="profile">
+            <h2>{{ user.username }}</h2>
+            <p>Email: {{ user.email }}</p>
+            <p>Bio: Update your bio here.</p>
+            <button>Edit Profile</button>
+        </section>
+        {%endblock%}
+    </main>
+   
+    

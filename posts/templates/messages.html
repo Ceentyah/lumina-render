@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%load static%}
+
+  {%block content%}
+    <main>
+        <section class="messages">
+            <h2>Your Messages</h2>
+            <div class="message-thread">
+                <h3>Conversation with Emily Johnson</h3>
+                <div class="message">
+                    <strong>Emily:</strong> Hey! How was your weekend?
+                </div>
+                <div class="message">
+                    <strong>You:</strong> It was great, thanks! Went hiking and then had a barbecue.
+                </div>
+                <form>
+                    <textarea placeholder="Type a message..."></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        {%endblock%}
+    </main>
+    
+    
